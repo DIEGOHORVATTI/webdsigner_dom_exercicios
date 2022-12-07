@@ -11,27 +11,27 @@ $background-color_3: #e8eeef;
 $background-color_4: transparent;
 $background-color_5: #1abc9c;
 
-:root{
+:root {
+  --thema-background: rgb(0, 0, 0, 1);
+  --thema-container: rgb(34, 34, 34);
+  --thema-color: rgb(255, 255, 255);
+  
   &[data-theme='dark'] {
-    --thema-background: rgb(0, 0, 0, 1);
-    --thema-container: rgb(34, 34, 34);
-    --thema-color: rgb(255, 255, 255);
-  }
-
-  &[data-theme='light'] {
     --thema-background: rgb(216, 216, 216);
     --thema-container: rgb(255, 255, 255);
     --thema-color: rgb(0, 0, 0);
   }
 }
 
+
 *{
   font-family: $font-family_0;
 }
 
 html{
+  background-color: $background-color_1;
+  transition: all 1s;
   body {
-    background-color: $background-color_1;
       .container {
         max-width: 500px;
         padding: 10px 20px;
@@ -41,20 +41,27 @@ html{
         padding: 20px;
         border-radius: 8px;
         font-family: $font-family_1;
+        transition: all 0.5s;
 
         .clear{
           color: var(--thema-color);
         }
 
-        .right{
+        .right {
           background-color: var(--thema-color);
           border-radius: 10px;
-          padding: 10px;
-          width: 20px;
-          height: 20px;
+          padding: 8px;
           color: var(--thema-color);
           border: none;
-          box-shadow: rgba(252, 252, 252, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          box-shadow: var(--thema-color) 1px 1px 1px, var(--thema-color) 0px 1px 30px, var(--thema-color) 1px 1px 1px;
+          transition: all 1s;
+          border-radius: 100%;
+          &:focus, &:active {
+            border: none;
+          }
+          &:hover {
+            transform: scale(1.3);
+          }
         }
 
         /* 
@@ -189,7 +196,7 @@ html{
             text-align: center;
             font-style: normal;
             width: 100%;
-            border: 1px solid #f8fffe;
+            border: 1px solid var(--thema-color);
             border-radius: 0.4rem;
             margin-bottom: 10px;
             background-color: $background-color_4;
@@ -199,7 +206,6 @@ html{
               transition: all 0.3s;
               background: var(--thema-background);
               color: var(--thema-color);
-              border: 1px solid transparent;
             }
           }
         }

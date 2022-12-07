@@ -1,0 +1,16 @@
+{
+  "name": "tarefa_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tsc:watch": "sass --watch --color --trace ./styles.scss ./src/css/styles.min.css --style=compressed --no-source-map | lolcat",
+    "sass:watch": "tsc --watch --strict --lib DOM,DOM.Iterable,ES6 --target ES6 ./index.ts --target esnext --outfile ./src/js/main.js --removecomments && esbuild ./src/js/main.js --minify --outfile='./src/js/main.min.js' | lolcat",
+    "tsc:compiler": "esbuild ./src/js/main.js --minify --outfile='./src/js/main.min.js'",
+    "sass:compiler": "sass --trace ./styles.scss ./src/css/styles.min.css --style=compressed --no-source-map",
+    "dev": "yarn sass:watch & yarn tsc:watch",
+    "build": "yarn sass:compiler & yarn tsc:compiler"
+  },
+  "repository": "git@github.com:DIEGOHORVATTI/webdsigner_dom_exercicios.git",
+  "author": "div-leadeasy <diego-leadeasy@outlook.com.br>",
+  "license": "MIT"
+}

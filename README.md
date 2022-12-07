@@ -29,10 +29,10 @@ Quando o usuário clicar no link 'Modo Dark', adicionar a classe `.dark` na tag 
 - Publique o site (github pages);
 - Enviar o link do seu repositório publicado no github pages;
 
-## **notas aluno**
+## **Notas de desenvolvimento**
 
 <ul>
   <li>
-    <p>compiler sass minified to terminal: <pre>sass --color --watch --trace ./styles.scss ./src/css/styles.min.css --style=compressed --no-source-map | lolcat</pre></p>
+    <p>Run app:<pre>yarn dev or npm dev</pre></p>
   </li>
 </ul>
