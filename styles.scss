@@ -1,13 +1,12 @@
 $color_1: var(--thema-color);
 $color_2: #677378;
 $color_3: #FFF;
-$color_4: white;
-$color_5: red;
+$white: white;
+$danger: red;
 $font-family_0: 'Franklin Gothic Medium', 'Arial Narrow',Arial, sans-serif;
 $font-family_1: Georgia, "Times New Roman", Times, serif;
 $font-family_2: 'Courier New', Courier, monospace;
 $background-color_1: var(--thema-background);
-$background-color_2: red;
 $background-color_3: #e8eeef;
 $background-color_4: transparent;
 $background-color_5: #1abc9c;
@@ -226,7 +225,7 @@ html{
             list-style: none;
             font-family: $font-family_2;
             background-color: $background-color_5;
-            color: $color_4;
+            color: $white;
             padding: 10px;
             margin-bottom: 4px;
           }
@@ -243,7 +242,7 @@ html{
       }
 
       span[role="alert"] {
-        color: $color_5;
+        color: $danger;
         display: none;
       }
 

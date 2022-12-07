@@ -8,6 +8,10 @@ function darkMode() {
   container.setAttribute("data-theme", targetTheme);
 
   localStorage.setItem("theme", targetTheme);
+
+  setTimeout(function () {
+    container.style.transitionDuration = "2s";
+  }, 0.5);
 }
 
 function trocaMode() {

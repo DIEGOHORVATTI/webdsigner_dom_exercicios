@@ -33,6 +33,6 @@ Quando o usuário clicar no link 'Modo Dark', adicionar a classe `.dark` na tag 
 
 <ul>
   <li>
-    <p>compiler sass minified to terminal: <pre>sass --watch ./styles.scss  ./styles.min.css --style=compressed</pre></p>
+    <p>compiler sass minified to terminal: <pre>sass --color --watch --trace ./styles.scss ./src/css/styles.min.css --style=compressed --no-source-map | lolcat</pre></p>
   </li>
 </ul>
